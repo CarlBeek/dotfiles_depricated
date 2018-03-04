@@ -22,6 +22,10 @@ brew install gnu-sed --with-default-names
 # Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before
 # running `chsh`.
 brew install bash
+if [ -z `grep "/usr/local/bin/bash"  /etc/shells` ]; then
+  echo "/usr/local/bin/bash" >> /etc/shells
+fi
+sudo chsh -s /usr/local/bin/bash
 brew install bash-completion2
 
 # Switch to using brew-installed bash as default shell
@@ -45,6 +49,23 @@ brew tap bramstein/webfonttools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
+# Instal some more fonts:
+brew tap caskroom/fonts
+brew cask install \
+  font-anonymous-pro \
+  font-dejavu-sans-mono-for-powerline \
+  font-droid-sans-mono-for-powerline \
+  font-meslo-lg font-input \
+  font-inconsolata font-inconsolata-for-powerline \
+  font-liberation-mono-for-powerline \
+  font-liberation-sans \
+  font-meslo-lg \
+  font-nixie-one \
+  font-office-code-pro \
+  font-raleway font-roboto \
+  font-source-code-pro font-source-code-pro-for-powerline \
+  font-source-sans-pro
+
 
 # Install some CTF tools; see https://github.com/ctfs/write-ups.
 brew install aircrack-ng
@@ -88,6 +109,16 @@ brew install ssh-copy-id
 brew install tree
 brew install vbindiff
 brew install zopfli
+brew install htop-osx
+brew install mongodb
+brew install node
+brew install unrar
+
+# Quicklook plugins:
+brew cask install \
+	qlcolorcode qlmarkdown qlprettypatch qlstephen \
+	qlimagesize \
+	quicklook-csv quicklook-json epubquicklook
 
 # Remove outdated versions from the cellar.
 brew cleanup
