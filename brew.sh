@@ -114,6 +114,11 @@ brew install mongodb
 brew install node
 brew install unrar
 
+# Install all them tasty window manger stuffies:
+brew install koekeishiya/formulae/skhd
+brew tap crisidev/homebrew-chunkwm
+brew install chunkwm
+
 # Quicklook plugins:
 brew cask install \
 	qlcolorcode qlmarkdown qlprettypatch qlstephen \
