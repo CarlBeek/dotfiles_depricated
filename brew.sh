@@ -113,6 +113,7 @@ brew install htop-osx
 brew install mongodb
 brew install node
 brew install unrar
+brew install sshfs
 
 # Install all them tasty window manger stuffies:
 brew install koekeishiya/formulae/skhd
