@@ -54,7 +54,7 @@ alias week='date +%V'
 alias timer='echo "Timer started. Stop with Ctrl-D." && date && time cat && date'
 
 # Get macOS Software Updates, and update installed Homebrew, npm, and their installed packages
-alias update='sudo softwareupdate -i -a; brew update; brew upgrade;  brew cask outdated --greedy --verbose | grep -v '(latest)' | awk '{print $1}' | xargs brew cask reinstall; brew cleanup; npm install npm -g; npm update -g'
+alias update="sudo softwareupdate -i -a; brew update; brew upgrade;  brew cask outdated --greedy --verbose | grep -v '(latest)' | awk '{print \$1}' | xargs brew cask reinstall; brew cleanup; npm install npm -g; npm update -g"
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
