@@ -1,5 +1,3 @@
-#!/bin/bash
-
 #
 # NOTE: specify the absolutepath to the directory to use when
 #       loading a plugin. '~' expansion is supported.

@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Install command-line tools using Homebrew.
 
 # Make sure we’re using the latest Homebrew.
@@ -84,7 +82,7 @@ brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
 # Instal some more fonts:
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts 
 brew cask install $FONTS
 
 
@@ -100,10 +98,9 @@ QUICKLOOKS=(
     quicklook-json
     webpquicklook
 )
-caskin $QUICKLOOKS
+brew cask install $QUICKLOOKS
 # restart quicklook manager
 qlmanage -r
-brew cleanup
 
 
 # Remove outdated versions from the cellar.
