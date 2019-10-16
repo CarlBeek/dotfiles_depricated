@@ -13,6 +13,4 @@ plugins=(
     z
 )
 
-ZSH_THEME="spaceship"
-
 source ~/.aliases
